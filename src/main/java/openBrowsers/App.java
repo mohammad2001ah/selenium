@@ -1,4 +1,4 @@
-package com.mycompany;
+package openBrowsers;
 public class App 
 {
     public static void main( String[] args )
