@@ -17,5 +17,7 @@ public class windowSize {
     driver.manage().window().setSize(iPadAir);
 
 
+
+
   }
 }
