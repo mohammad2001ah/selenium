@@ -12,9 +12,9 @@ public class todoApp_input {
     WebDriver driver =new ChromeDriver();
     driver.manage().window().maximize();
     driver.get("http://localhost:8081");
-    driver.findElement(By.cssSelector("[data-testid=email]")).sendKeys("mohammad@gmail.com");
-    driver.findElement(By.xpath("//*[@data-testid='password']")).sendKeys("123456Mah@");
-    driver.findElement((By.xpath("//*[@type='button']"))).click();
+//    driver.findElement(By.cssSelector("[data-testid=email]")).sendKeys("mohammad@gmail.com");
+//    driver.findElement(By.xpath("//*[@data-testid='password']")).sendKeys("123456Mah@");
+//    driver.findElement((By.xpath("//*[@type='button']"))).click();
     //selenium search for the element before the page finishes loading
     // so we use timeout to get selenium time to find element
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -36,8 +36,13 @@ public class todoApp_input {
 //    Dimension s2= driver.findElement(By.cssSelector("[data-testid=todo-item]")).getSize();
 //    System.out.println(s2);
 
-    Rectangle s2= driver.findElement(By.cssSelector("[data-testid=todo-item]")).getRect();
-    System.out.println(s2.x);
+//    Rectangle s2= driver.findElement(By.cssSelector("[data-testid=todo-item]")).getRect();
+//    System.out.println(s2.x);
+
+//    String access =driver.findElement(By.cssSelector("[data-testid=email]")).getAccessibleName();
+    String access =driver.findElement(By.cssSelector("[data-testid=email]")).getAriaRole();
+    System.out.println(access);
+
 
 
     driver.quit();
